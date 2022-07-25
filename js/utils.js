@@ -7,17 +7,26 @@ function rectangularCollision({rectangle1, rectangle2}){
     )
 }
 
+function restartFunction(){
+    location.reload()
+}
+
 function determineWinner({player, enemy, timerId}){
 
     clearTimeout(timerId)
     document.querySelector('#displayText').style.display = 'flex'
+    document.querySelector('#restart').style.display = 'flex'
+    document.querySelector('#restart').onclick = function () {restartFunction()};
 
     if(player.health === enemy.health){
         document.querySelector('#displayText').innerHTML = 'Tie'
+        // document.querySelector('#restart').onclick = function () {restartFunction()};
     }else if (player.health > enemy.health){
         document.querySelector('#displayText').innerHTML = 'Player 1 wins'
+        // document.querySelector('#restart').onclick = function () {restartFunction()};
     }else if (player.health < enemy.health){
         document.querySelector('#displayText').innerHTML = 'Player 2 wins'
+        // document.querySelector('#restart').onclick = function () {restartFunction()};
     }
 }
 

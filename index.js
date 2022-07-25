@@ -4,7 +4,7 @@ const c =  canvas.getContext('2d')
 canvas.width = 1024
 canvas.height = 576
 
-c.fillRect(0,0,canvas.width, canvas.height)
+c.fillRect(100,0,canvas.width, canvas.height)
 
 const gravity = 0.7
 
@@ -28,7 +28,7 @@ const shop = new Sprite({
 
 const player = new Fighter({
 position:{
-    x:0,
+    x:80,
     y:0
 },
 velocity:{
@@ -86,7 +86,7 @@ velocity:{
 
 const enemy = new Fighter({
     position:{
-        x:400,
+        x:850,
         y:100
     },
     velocity:{
